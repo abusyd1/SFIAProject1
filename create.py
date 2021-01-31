@@ -2,6 +2,7 @@
 
 from app import db, Team
 
+db.drop_all()
 db.create_all()
 
 db.session.add_all([
@@ -22,9 +23,7 @@ db.session.add_all([
    Team(player_name = "Aaron Wan-Bissaka", player_age = '23', player_position = "Defender"),  
    Team(player_name = "Brandon Williams", player_age = '20', player_position = "Defender"), 
    Team(player_name = "Arnau Puigmal", player_age = '20', player_position = "Midfielder"),  
-   Team(player_name = "Bruno Fernandes", player_age = '26', player_position = "Midfielder"),  
-   Team(player_name = "Arnau Puigmal", player_age = '20', player_position = "Midfielder"),  
-   Team(player_name = "Arnau Puigmal", player_age = '20', player_position = "Midfielder"),  
+   Team(player_name = "Bruno Fernandes", player_age = '26', player_position = "Midfielder"),    
    Team(player_name = "Fred", player_age = '27', player_position = "Midfielder"),  
    Team(player_name = "Donny van de Beek", player_age = '23', player_position = "Midfielder"),  
    Team(player_name = "Jesse Lingard", player_age = '28', player_position = "Midfielder"),  
