@@ -1,5 +1,5 @@
 # MyUnited
-### _A site showcases the Man Utd team, alongside their ratings._
+### _A site showcasing the Man Utd team, alongside their ratings._
 
 
 ## Project Brief
@@ -18,6 +18,6 @@ According to the project specification, the objective of this project is to 'cre
 * CI Server with Jenkins
 * Use of a Cloud Server GCP
 
-In my project, I will try to create a application which showcases a football team (Manchester United), where the user can view all players, read their current ratings as well as update ratings, update/add players to the team & delete a player from the team or rating from a player.
+In my project, I will try to create a application which showcases a football team (Manchester United), where the user can view all players, read their current ratings as well as update ratings, update/add players to the team & delete a player from the team OR the rating from a player.
 
 
