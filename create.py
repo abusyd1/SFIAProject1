@@ -1,43 +1,44 @@
 #!/usr/bin/python3
 
-from app import db, Team
+from app import db, Parent, Player
 
 db.drop_all()
 db.create_all()
 
-db.session.add_all([
-   Team(player_name = "David De Gea", player_age = 30, player_position = "Goalkeeper"),
-   Team(player_name = "Dean Henderson", player_age = '23', player_position = "Goalkeeper"),
-   Team(player_name = "Lee Grant", player_age = '39', player_position = "Goalkeeper"),
-   Team(player_name = "Sergio Romero", player_age = '34', player_position = "Goalkeeper"),
-   Team(player_name = "Eric Bailly", player_age = '26', player_position = "Defender"),
-   Team(player_name = "Alex Telles", player_age = '28', player_position = "Defender"),
-   Team(player_name = "Marcos Rojo", player_age = '30', player_position = "Defender"),  
-   Team(player_name = "Phil Jones", player_age = '28', player_position = "Defender"),  
-   Team(player_name = "Ethan Laird", player_age = '19', player_position = "Defender"),  
-   Team(player_name = "Victor Lindelof", player_age = '26', player_position = "Defender"),   
-   Team(player_name = "Harry Maguire", player_age = '27', player_position = "Defender"), 
-   Team(player_name = "Teden Mengi", player_age = '18', player_position = "Defender"), 
-   Team(player_name = "Luke Shaw", player_age = '25', player_position = "Defender"),     
-   Team(player_name = "Axel Tuanzebe", player_age = '23', player_position = "Defender"),
-   Team(player_name = "Aaron Wan-Bissaka", player_age = '23', player_position = "Defender"),  
-   Team(player_name = "Brandon Williams", player_age = '20', player_position = "Defender"), 
-   Team(player_name = "Arnau Puigmal", player_age = '20', player_position = "Midfielder"),  
-   Team(player_name = "Bruno Fernandes", player_age = '26', player_position = "Midfielder"),    
-   Team(player_name = "Fred", player_age = '27', player_position = "Midfielder"),  
-   Team(player_name = "Donny van de Beek", player_age = '23', player_position = "Midfielder"),  
-   Team(player_name = "Jesse Lingard", player_age = '28', player_position = "Midfielder"),  
-   Team(player_name = "Juan Mata", player_age = '32', player_position = "Midfielder"),  
-   Team(player_name = "Nemanja Matic", player_age = '32', player_position = "Midfielder"),  
-   Team(player_name = "Scott McTominay", player_age = '24', player_position = "Midfielder"),  
-   Team(player_name = "Paul Pogba", player_age = '27', player_position = "Midfielder"),  
-   Team(player_name = "Daniel James", player_age = '23', player_position = "Midfielder"),  
-   Team(player_name = "Edinson Cavani", player_age = '33', player_position = "Forward"),  
-   Team(player_name = "Mason Greenwood", player_age = '19', player_position = "Forward"), 
-   Team(player_name = "Amad Diallo", player_age = '18', player_position = "Forward"),  
-   Team(player_name = "Facundro Pellistri", player_age = '19', player_position = "Forward"),  
-   Team(player_name = "Anthony Martial", player_age = '25', player_position = "Forward"),
-   Team(player_name = "Marcus Rashford", player_age = '23', player_position = "Forward")])  
+united = Parent(name = "Manchester United", league = "Premier League")
 
-
+db.session.add(united)
+db.session.add_all([ 
+    Player(name = "David De Gea", age = 30, position = "Goalkeeper", team=united),
+   Player(name = "Dean Henderson", age = '23', position = "Goalkeeper", team=united),
+   Player(name = "Lee Grant", age = '39', position = "Goalkeeper", team=united),
+   Player(name = "Sergio Romero", age = '34', position = "Goalkeeper", team=united),
+   Player(name = "Eric Bailly", age = '26', position = "Defender", team=united),
+   Player(name = "Alex Telles", age = '28', position = "Defender", team=united),
+   Player(name = "Marcos Rojo", age = '30', position = "Defender", team=united),
+   Player(name = "Phil Jones", age = '28', position = "Defender", team=united),
+   Player(name = "Ethan Laird", age = '19', position = "Defender", team=united),
+   Player(name = "Victor Lindelof", age = '26', position = "Defender", team=united),
+   Player(name = "Harry Maguire", age = '27', position = "Defender", team=united),
+   Player(name = "Teden Mengi", age = '18', position = "Defender", team=united),
+   Player(name = "Luke Shaw", age = '25', position = "Defender", team=united),
+   Player(name = "Axel Tuanzebe", age = '23', position = "Defender", team=united),
+   Player(name = "Aaron Wan-Bissaka", age = '23', position = "Defender", team=united),
+   Player(name = "Brandon Williams", age = '20', position = "Defender", team=united),
+   Player(name = "Arnau Puigmal", age = '20', position = "Midfielder", team=united),
+   Player(name = "Bruno Fernandes", age = '26', position = "Midfielder", team=united),
+   Player(name = "Fred", age = '27', position = "Midfielder", team=united),
+   Player(name = "Donny van de Beek", age = '23', position = "Midfielder", team=united),
+   Player(name = "Jesse Lingard", age = '28', position = "Midfielder", team=united),
+   Player(name = "Juan Mata", age = '32', position = "Midfielder", team=united),
+   Player(name = "Nemanja Matic", age = '32', position = "Midfielder", team=united),
+   Player(name = "Scott McTominay", age = '24', position = "Midfielder", team=united),
+   Player(name = "Paul Pogba", age = '27', position = "Midfielder", team=united),
+   Player(name = "Daniel James", age = '23', position = "Midfielder", team=united),
+   Player(name = "Edinson Cavani", age = '33', position = "Forward", team=united),
+   Player(name = "Mason Greenwood", age = '19', position = "Forward", team=united),
+   Player(name = "Amad Diallo", age = '18', position = "Forward", team=united),
+   Player(name = "Facundro Pellistri", age = '19', position = "Forward", team=united),
+   Player(name = "Anthony Martial", age = '25', position = "Forward", team=united),
+   Player(name = "Marcus Rashford", age = '23', position = "Forward", team=united)])
 db.session.commit()

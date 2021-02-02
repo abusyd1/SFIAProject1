@@ -9,19 +9,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/Pro
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 db = SQLAlchemy(app)
 
-class Team(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    player_name = db.Column(db.String(50), nullable=False)
-    player_age = db.Column(db.Integer, nullable=False)
-    player_position = db.Column(db.String(10), nullable = False)
-    parents = db.relationship('Parent', backref='team', lazy=True)
-
 class Parent(db.Model):
     id= db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     league = db.Column(db.String(50), nullable=False)
-    team_id = db.Column(db.Integer, db.ForeignKey('team.id'), nullable=False)
+    players = db.relationship('Player', backref='team')
 
+class Player(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+    position = db.Column(db.String(50), nullable=False)
+    parent_id = db.Column(db.Integer, db.ForeignKey('parent.id'))
 
 if __name__=='__main__':
     app.run(debug==True, host='0.0.0.0')
