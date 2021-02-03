@@ -1,6 +1,7 @@
-#!/usr/bin/python3
+#!usr/bin/python3
 
-from app import db, Parent, Player
+from application import app, db
+from application.models import Parent, Player
 
 db.drop_all()
 db.create_all()
@@ -8,7 +9,7 @@ db.create_all()
 united = Parent(name = "Manchester United", league = "Premier League")
 
 db.session.add(united)
-db.session.add_all([ 
+db.session.add_all([
     Player(name = "David De Gea", age = 30, position = "Goalkeeper", team=united),
    Player(name = "Dean Henderson", age = '23', position = "Goalkeeper", team=united),
    Player(name = "Lee Grant", age = '39', position = "Goalkeeper", team=united),
@@ -42,3 +43,8 @@ db.session.add_all([
    Player(name = "Anthony Martial", age = '25', position = "Forward", team=united),
    Player(name = "Marcus Rashford", age = '23', position = "Forward", team=united)])
 db.session.commit()
+
+
+
+
+
