@@ -20,4 +20,8 @@ class Player(db.Model):
     position = db.Column(db.String(50), nullable=False)
     parent_id = db.Column(db.Integer, db.ForeignKey('parent.id'))
 
-
+class Add(FlaskForm):
+    name = StringField('Name', [Length(min=1, max=50)])
+    age = IntegerField("Age", validators=[DataRequired(), NumberRange(15,50)])
+    position = StringField('Position', [Length(min=4, max=10)])
+    submit = SubmitField('Add Player')
