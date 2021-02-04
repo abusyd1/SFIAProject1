@@ -1,1 +1,31 @@
-i
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+   <h2> Name:  {{ parent.name }} </h2>
+   <br>
+    <h2> League: {{ parent.league }} </h2>
+   <br>
+    <form action="{{ url_for('addplayer', Name=parent.name) }}">
+      <input type=submit value="Add Player">
+   </form>
+   <br>
+
+   <h1> Players</h1>
+
+   {% for players in parent.players %}
+__________________________________________________________________________________________
+       <h3> {{ player.name }}</h3>
+        <h4>{{ player.age }}</h4>           
+       <h4>{{ player.position }}</h4>
+        <form action="{{ url_for('edit', number=players.id) }}">
+         <input type=submit value="Delete Player">
+      </form>
+      <form action="{{ url_for('update', number=players.id) }}">
+         <input type=submit value="Edit Player">
+      </form>
+{% endfor %}
+
+
+
+
+{% endblock body %}

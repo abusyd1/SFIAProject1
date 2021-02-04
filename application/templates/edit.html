@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+Player Name: {{ players.name }}
+<br>
+<form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name }}
+        <br>
+        {{ form.age.label }} {{ form.age }}
+        <br>
+        {{ form.position.label }} {{ form.position}}
+        <br>
+        {{ form.submit }}
+    {{ message }}
+    </form>
+
+{% endblock body %}
