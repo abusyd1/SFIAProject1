@@ -7,8 +7,12 @@ db.drop_all()
 db.create_all()
 
 united = Parent(name = "Manchester United", league = "Premier League")
+liverpool = Parent(name = "Liverpool FC", league = "Premier League")
+chelsea = Parent(name = "Chelsea FC", league = "Premier League")
 
 db.session.add(united)
+db.session.add(liverpool)
+db.session.add(chelsea)
 db.session.add_all([
     Player(name = "David De Gea", age = 30, position = "Goalkeeper", team=united),
    Player(name = "Dean Henderson", age = '23', position = "Goalkeeper", team=united),
