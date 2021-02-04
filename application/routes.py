@@ -30,4 +30,4 @@ def add():
 @app.route('/parent/<Name>', methods = ["GET", "POST"])
 def parent(Name):
     if request.method == "GET":
-        return render_template("update.html", Name=parent.id query=Player.query.filter(Player.parent_id.contains(Name)))
+        return render_template("update.html", query=Player.query.filter(Player.parent_id.contains('1')))
