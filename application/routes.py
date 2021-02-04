@@ -10,23 +10,23 @@ from wtforms import StringField, SubmitField
 @app.route('/home', methods=['GET', 'POST'])
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    return render_template("layout.html")
+    if request.method =="GET":
+       return render_template("index.html", query=Parent.query.all())
 
-
-@app.route('/players', methods=['GET', 'POST'])
-def players():
-    if request.method == "GET":
-       return render_template("players.html", query=Player.query.all())
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     form=Add()
     if request.method == 'POST':
-        new_player = Player(name=form.name.data, age=form.age.data, position=form.position.data)
+        new_team = Parent(name=form.name.data, league=form.league.data)
         if not form.validate_on_submit():
-            return render_template('adderror.html', form=form, title="New Player")
+            return render_template('adderror.html', form=form, title="New Team")
         else:
-            db.session.add(new_player)
+            db.session.add(new_team)
             db.session.commit()
-            return redirect(url_for("players"))
-    return render_template('add.html', form=form, title="New Player")
+            return redirect(url_for("home"))
+    return render_template('add.html', form=form, title="New Team")
+
+@app.route('/parent/<Name>', methods = ["GET", "POST"])
+def parent(Name):
+    return render_template("update.html")
