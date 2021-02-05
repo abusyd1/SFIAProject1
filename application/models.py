@@ -24,3 +24,9 @@ class Add(FlaskForm):
     name = StringField('Name', [Length(min=5, max=50)])
     league = StringField('League', [Length(min=5, max = 100)])
     submit = SubmitField('Add Team')
+
+class AddPlayer(FlaskForm):
+    name = StringField('Player Name', [Length(min=4, max=100)])
+    age = IntegerField('Age', validators = [DataRequired(), NumberRange(15,50)])
+    position = StringField('Position', [Length(min=3, max=100)])
+    submit = SubmitField('Add Player')

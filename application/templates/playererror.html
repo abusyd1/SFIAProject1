@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+Error: invalid entry
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.name.label }} {{ form.name }} {{ form.name.errors }}
+                <br>
+                {{ form.age.label }} {{ form.age }} {{ form.age.errors }}
+                <br>
+                {{ form.position.label }} {{ form.position}} {{ form.position.errors}}
+                <br>
+                {{ form.submit }}
+            {{ message }}
+            </form>
+        </div>
+{% endblock body %}
