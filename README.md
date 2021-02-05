@@ -1,5 +1,5 @@
-# MyUnited
-### _A site showcasing the Man Utd team, alongside their ratings._
+# Football Transfer Cenral
+### _A site showcasing Football teams, with the ability to add new teams, and add players to those teams._
 
 
 ## Project Brief
@@ -18,6 +18,6 @@ According to the project specification, the objective of this project is to 'cre
 * CI Server with Jenkins
 * Use of a Cloud Server GCP
 
-In my project, I will try to create a application which showcases a football team (Manchester United), where the user can view all players, read their current ratings as well as update ratings, update/add players to the team & delete a player from the team OR the rating from a player.
+In my project, I will try to create a application which showcases football teams, where the user can view these teams, add new teams, view players within the teams, and edit or delete players from the teams.
 
 
