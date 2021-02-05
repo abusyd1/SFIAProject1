@@ -27,7 +27,7 @@ def add():
             return redirect(url_for("home"))
     return render_template('add.html', form=form, title="New Team")
 
-@app.route('/parent/<Name>', methods = ["GET", "POST"])
-def parent(Name):
+@app.route('/parent/<id>', methods = ["GET", "POST"])
+def parent(id):
     if request.method == "GET":
-        return render_template("update.html", query=Player.query.filter(Player.parent_id.contains('1')))
+        return render_template("update.html", query=Player.query.filter_by(parent_id=id))

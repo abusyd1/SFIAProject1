@@ -45,7 +45,9 @@ db.session.add_all([
    Player(name = "Amad Diallo", age = '18', position = "Forward", team=united),
    Player(name = "Facundro Pellistri", age = '19', position = "Forward", team=united),
    Player(name = "Anthony Martial", age = '25', position = "Forward", team=united),
-   Player(name = "Marcus Rashford", age = '23', position = "Forward", team=united)])
+   Player(name = "Marcus Rashford", age = '23', position = "Forward", team=united),
+   Player(name = "Timo Werner", age = "23", position = "Forward", team=chelsea),
+   Player(name = "Mo Salah", age = "27", position = "Forward", team=liverpool)])
 db.session.commit()
 
 
