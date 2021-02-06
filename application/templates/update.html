@@ -26,9 +26,14 @@
      {{player.position}}
  </td>
  <td>
- <form action="{{url_for('delete', id=parent.id)}}">
+ <form action="{{url_for('delete', parent_id=player.parent_id, id=player.id)}}">
              <input type=submit value="Delete Player">
  </form>
+ </td>
+ <td>
+	 <form action="{{url_for('edit', parent_id=player.parent_id, id=player.id)}}">
+	     <input type=submit value="Edit Player">
+	 </form>
  </td>
 </tr>
 
