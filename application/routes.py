@@ -20,7 +20,7 @@ def add():
     if request.method == 'POST':
         new_team = Parent(name=form.name.data, league=form.league.data)
         if not form.validate_on_submit():
-            return render_template('adderror.html', form=form, title="New Team")
+            return render_template('adderror.html', form=form)
         else:
             db.session.add(new_team)
             db.session.commit()
@@ -38,12 +38,12 @@ def player(id):
     if request.method == "POST":
         new_player=Player(name=form.name.data, age=form.age.data, position=form.position.data, parent_id=id)
         if not form.validate_on_submit():
-            return render_template('playererror.html', form=form, title="Add Player: "+id)
+            return render_template('playererror.html', form=form)
         else:
             db.session.add(new_player)
             db.session.commit()
             return redirect(url_for("parent", id=new_player.parent_id))
-    return render_template('player.html', form=form, parent=parent, title="Add Player: "+id)
+    return render_template('player.html', form=form)
 
 @app.route('/delete/<id>')
 def delete(id):
