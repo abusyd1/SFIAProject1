@@ -30,3 +30,9 @@ class AddPlayer(FlaskForm):
     age = IntegerField('Age', validators = [DataRequired(), NumberRange(15,50)])
     position = StringField('Position', [Length(min=3, max=100)])
     submit = SubmitField('Add Player')
+
+class Delete(FlaskForm):
+    submit = SubmitField("Delete Player")
+
+class Update(FlaskForm):
+    submit = SubmitField("Update Player")

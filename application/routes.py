@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from application import app, db
-from application.models import Parent, Player, Add, AddPlayer
+from application.models import Parent, Player, Add, AddPlayer, Delete, Update
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -44,3 +44,26 @@ def player(id):
             db.session.commit()
             return redirect(url_for("parent", id=new_player.parent_id))
     return render_template('player.html', form=form, parent=parent, title="Add Player: "+id)
+
+@app.route('/delete/<id>')
+def delete(id):
+    play = Player.query.filter_by(parent_id=id).first()
+    i = play.parent_id
+    if play is not None:
+        db.session.delete(play)
+        db.session.commit()
+        return redirect(url_for("parent", id=i))
+
+
+
+@app.route('/edit/<id>', methods = ["GET", "POST"])
+def edit(id):
+    form1=Delete()
+    play = Player.query.filter_by(id=id).first()
+    n = play.name
+    a = play.age
+    p = play.position
+    i = play.parent_id
+    if request.method == "POST":
+        return redirect(url_for("delete", id=i))
+    return render_template('delete.html', form1=form1, title=n)
