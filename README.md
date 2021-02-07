@@ -24,6 +24,7 @@ The main tools that I used to create the application include Flask micro-framewo
 
 ## Initial Project Planning
 To begin with, I used a KANBAN board to organise and visualise tasks throughout the duration of the project. My inital KANBAN board can be seen below:
-![egg](https://ibb.co/3c92jXk)
+![image](https://user-images.githubusercontent.com/77271496/107160200-afc20c80-698c-11eb-9051-363fe9ff9ce4.png)
+
 
 
