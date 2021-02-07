@@ -20,4 +20,10 @@ According to the project specification, the objective of this project is to 'cre
 
 In my project, I will try to create a application which showcases football teams, where the user can view these teams, add new teams, view players within the teams, and edit or delete players from the teams.
 
+The main tools that I used to create the application include Flask micro-framework (Python Based), Jinja2, mySQL. Flask was ideal for this small project as there are many extensions such as FlaskSQLAlchemy which I also used in the project. In the 'requirements.txt' file, all extextensions used can be seen. 
+
+## Initial Project Planning
+To begin with, I used a KANBAN board to organise and visualise tasks throughout the duration of the project. My inital KANBAN board can be seen below:
+![egg](https://ibb.co/3c92jXk)
+
 
