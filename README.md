@@ -70,16 +70,11 @@ For this project, the testing will be handled using Pytest, which is a Python ba
 The test code which was written for this project was purely made to test the CRUD functionality, making sure that each function/URL did what it was supposed to do, whether it be create, read, update or delete. Within my test file, I created test databases with test tables, so that the actual database doesn't get tampered with, and rather some dummy databases. I started with some simple tests applied to each page, which was just able to prove that each page could be reached successfully without returning an error. Next, I tested the contents of the home page, to make sure that certain data which was meant to be shown, would be shown. I then went on to test the update and delete functionalities, making sure that certain data was edited upon request and then deleted upon request.
 
 Below can be seen the report from the Jenkins console output:
+
 ![image](https://user-images.githubusercontent.com/77271496/107177480-da7e8600-69c9-11eb-8898-b6ed8eee9069.png)
 
 As you can see, 86% of my files are covered, which suggests a good depth of the application has been tested, making it relatively successful test.
 
-##Front End
-The front end of my project is rather basic, using basic HTML. This is because the visual side wasn't a very big factor for this particular project, rather the functionality was most important. It is black and white text, with titles and all data presented in a tabular form, as can be seen below. 
-
-![image](https://user-images.githubusercontent.com/77271496/107178750-bf614580-69cc-11eb-8c62-20d26c3d46ba.png)
-
-an to check quality, and if they approve, it is pushed to a live envioronment. The difference between the test envioronment and live environment is that the test environment contains a debug mode, to be able to generate error reports.
 
 ## Testing
 For this project, the testing will be handled using Pytest, which is a Python based testing framework which tests funcitonality. It is widely extensible with a variety of seperate modules which can be installed onto it. One of the modules used in this project is Pytest-cov, which is an extension that allows for a calculation of percentages to show how much of a file has been tested. Pytest-cov allows for the generation of a HTML report, which is perfect for Jenkins as it can read this file easily. The type of testing to be used is Unit Testing, where the CRUD functionality would be tested.
@@ -87,6 +82,7 @@ For this project, the testing will be handled using Pytest, which is a Python ba
 The test code which was written for this project was purely made to test the CRUD functionality, making sure that each function/URL did what it was supposed to do, whether it be create, read, update or delete. Within my test file, I created test databases with test tables, so that the actual database doesn't get tampered with, and rather some dummy databases. I started with some simple tests applied to each page, which was just able to prove that each page could be reached successfully without returning an error. Next, I tested the contents of the home page, to make sure that certain data which was meant to be shown, would be shown. I then went on to test the update and delete functionalities, making sure that certain data was edited upon request and then deleted upon request.
 
 Below can be seen the report from the Jenkins console output:
+
 ![image](https://user-images.githubusercontent.com/77271496/107177480-da7e8600-69c9-11eb-8898-b6ed8eee9069.png)
 
 As you can see, 86% of my files are covered, which suggests a good depth of the application has been tested, making it relatively successful test.
@@ -104,7 +100,7 @@ can be seen below.
 
 ![image](https://user-images.githubusercontent.com/77271496/107178845-f5062e80-69cc-11eb-8c5f-57b8294c6789.png)
 
-##Evaluation
+## Evaluation
 
 ### Difficulties
 The main difficulty with this project was the timing in which we had to complete it. Within a week we had to create the app and all the documentation; this was difficult as we had issues regarding the Cloud Servers. We used GCP initially and I started some of my work there, however, due to the small computer sizes, the servers would crash. Therefore, I had to swith to using AWS EC2 instance instead, this took a little bit of getting used to. I am also using free trial status, so if I have to stop the instance, the process would not be automated.
