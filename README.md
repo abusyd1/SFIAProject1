@@ -64,17 +64,6 @@ The middle of the Pipeline delves more into the DevOps side of things. Using a w
 
 The last section of the Pipeline connects the Artefact to AWS, a human tester and then if all is well, it is finally pushed to a live environment, also on AWS. Once the artefact is checked, it is run on the AWS environment. If this is done succesfully, it is then tested by a human to check quality, and if they approve, it is pushed to a live envioronment. The difference between the test envioronment and live environment is that the test environment contains a debug mode, to be able to generate error reports.
 
-## Testing
-For this project, the testing will be handled using Pytest, which is a Python based testing framework which tests funcitonality. It is widely extensible with a variety of seperate modules which can be installed onto it. One of the modules used in this project is Pytest-cov, which is an extension that allows for a calculation of percentages to show how much of a file has been tested. Pytest-cov allows for the generation of a HTML report, which is perfect for Jenkins as it can read this file easily. The type of testing to be used is Unit Testing, where the CRUD functionality would be tested.
-
-The test code which was written for this project was purely made to test the CRUD functionality, making sure that each function/URL did what it was supposed to do, whether it be create, read, update or delete. Within my test file, I created test databases with test tables, so that the actual database doesn't get tampered with, and rather some dummy databases. I started with some simple tests applied to each page, which was just able to prove that each page could be reached successfully without returning an error. Next, I tested the contents of the home page, to make sure that certain data which was meant to be shown, would be shown. I then went on to test the update and delete functionalities, making sure that certain data was edited upon request and then deleted upon request.
-
-Below can be seen the report from the Jenkins console output:
-
-![image](https://user-images.githubusercontent.com/77271496/107177480-da7e8600-69c9-11eb-8898-b6ed8eee9069.png)
-
-As you can see, 86% of my files are covered, which suggests a good depth of the application has been tested, making it relatively successful test.
-
 
 ## Testing
 For this project, the testing will be handled using Pytest, which is a Python based testing framework which tests funcitonality. It is widely extensible with a variety of seperate modules which can be installed onto it. One of the modules used in this project is Pytest-cov, which is an extension that allows for a calculation of percentages to show how much of a file has been tested. Pytest-cov allows for the generation of a HTML report, which is perfect for Jenkins as it can read this file easily. The type of testing to be used is Unit Testing, where the CRUD functionality would be tested.
@@ -87,7 +76,7 @@ Below can be seen the report from the Jenkins console output:
 
 As you can see, 86% of my files are covered, which suggests a good depth of the application has been tested, making it relatively successful test.
 
-##Front End
+## Front End
 The front end of my project is rather basic, using basic HTML. This is because the visual sid
 e wasn't a very big factor for this particular project, rather the functionality was most imp
 ortant. It is black and white text, with titles and all data presented in a tabular form, as
