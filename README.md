@@ -76,7 +76,7 @@ Below can be seen the report from the Jenkins console output:
 
 As you can see, 86% of my files are covered, which suggests a good depth of the application has been tested, making it relatively successful test.
 
-##Front End
+## Front End
 The front end of my project is rather basic, using basic HTML. This is because the visual sid
 e wasn't a very big factor for this particular project, rather the functionality was most imp
 ortant. It is black and white text, with titles and all data presented in a tabular form, as
